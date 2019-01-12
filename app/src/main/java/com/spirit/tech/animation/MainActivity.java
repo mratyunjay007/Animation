@@ -8,22 +8,38 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView click,tvhi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       final TextView click=findViewById(R.id.btnclick);
-       final TextView tvhi=findViewById(R.id.newword);
+        click=findViewById(R.id.btnclick);
+       tvhi=findViewById(R.id.newword);
 
+       click.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
 
-        click.setOnClickListener(new View.OnClickListener() {
+               click.animate().alpha(0).setDuration(1000);
+               tvhi.animate().alpha(1).setDuration(1000);
+           }
+       });
+        tvhi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click.animate().alpha(0).setDuration(2000);
-                tvhi.animate().alpha(1).setDuration(4000);
+                tvhi.animate().alpha(0).setDuration(1000);
+
+                click.animate().alpha(1).setDuration(1000);
+
 
             }
         });
+
+
+
+
+
     }
+
 }

@@ -15,16 +15,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         click=findViewById(R.id.btnclick);
-       tvhi=findViewById(R.id.newword);
+        tvhi=findViewById(R.id.newword);
 
-       click.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+        click.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-               click.animate().alpha(0).setDuration(1000);
-               tvhi.animate().alpha(1).setDuration(1000);
-           }
-       });
+                click.animate().alpha(0).setDuration(1000);
+                tvhi.animate().alpha(1).setDuration(1000);
+            }
+        });
         tvhi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
